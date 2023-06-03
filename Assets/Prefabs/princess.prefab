@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2133140792552491345}
   - component: {fileID: 3303575118716421331}
   - component: {fileID: 4798325066004765192}
+  - component: {fileID: 6424014136441478608}
   m_Layer: 10
   m_Name: princess
   m_TagString: Untagged
@@ -124,8 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Camera","value":null,"typeHandle":{"Identification":"UnityEngine.Camera,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"GameState","value":null,"typeHandle":{"Identification":"ScoreScript,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"WrapperNodeTarget","value":null,"typeHandle":{"Identification":"WrapperNodeTarget,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"GameState","value":null,"typeHandle":{"Identification":"GameStateScript,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!114 &2133140792552491345
@@ -206,3 +206,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.26, y: 0.49000007}
   m_Direction: 0
+--- !u!114 &6424014136441478608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912034969426842053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b732f7f1d2faef46b0e19dcb47cd419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

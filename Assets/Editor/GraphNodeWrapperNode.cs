@@ -3,16 +3,13 @@ using UnityEngine;
 using Unity.VisualScripting;
 
 [UnitCategory("My Custom Nodes")]
-public class GraphNodeWrapperNode : Unit {
+public class GraphNodeWrapperNode : Unit
+{
+    [DoNotSerialize] public ControlInput enter;
 
-    [DoNotSerialize]
-    public ControlInput enter;
+    [DoNotSerialize] public ControlOutput exit;
 
-    [DoNotSerialize]
-    public ControlOutput exit;
-    
-    [DoNotSerialize]
-    public ValueInput inputValue;
+    [DoNotSerialize] public ValueInput inputValue;
 
     protected override void Definition()
     {
@@ -27,8 +24,5 @@ public class GraphNodeWrapperNode : Unit {
         flow.GetValue<WrapperNodeTarget>(inputValue).run();
 
         return exit;
-        
-        
     }
 }
-
