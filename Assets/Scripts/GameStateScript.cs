@@ -16,7 +16,7 @@ public class GameStateScript : MonoBehaviour
     public int Score
     {
         get => _score;
-        set
+        private set
         {
             _score = value;
             ScoreText.text = "Score: " + value;
@@ -131,5 +131,5 @@ public class GameStateScript : MonoBehaviour
     {
         CountdownText.text = "Time: " + Mathf.CeilToInt(remainingSec);
     }
-    
+
 }

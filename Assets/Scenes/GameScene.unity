@@ -613,7 +613,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705012820
 GameObject:
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   - {x: 3, y: -4, z: 1}
   - {x: -3, y: -3, z: 1}
   - {x: 0, y: -2, z: 1}
-  PrincessPrefab: {fileID: 912034969426842053, guid: 01fe83352452f154285377b32364f81a, type: 3}
+  PrincessPrefab: {fileID: 5734220930006035454, guid: 01fe83352452f154285377b32364f81a, type: 3}
   MaxPrincesses: 3
 --- !u!114 &1422965617
 MonoBehaviour:
@@ -1325,7 +1325,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -2016,7 +2016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8799786683667088895, guid: 54e07519ab4b541a2af224ebe4afdfee, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8799786683667088895, guid: 54e07519ab4b541a2af224ebe4afdfee, type: 3}
       propertyPath: m_LocalPosition.x
