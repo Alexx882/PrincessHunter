@@ -715,7 +715,7 @@ MonoBehaviour:
   - {x: -3, y: -3, z: 1}
   - {x: 0, y: -2, z: 1}
   PrincessPrefab: {fileID: 912034969426842053, guid: 01fe83352452f154285377b32364f81a, type: 3}
-  MaxPrincesses: 1
+  MaxPrincesses: 3
 --- !u!4 &1425297549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7931152948336880897, guid: ccb6e72d06e52184987cc0a34b68bd45, type: 3}
