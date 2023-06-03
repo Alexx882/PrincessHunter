@@ -45,4 +45,9 @@ public class GameStateScript : MonoBehaviour
         Score++;
         UiText.UpdateScore();
     }
+
+    public void PrincessHidden()
+    {
+        curPrincesses--;
+    }
 }

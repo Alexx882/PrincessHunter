@@ -32,7 +32,7 @@ public class PrincessScript : WrapperNodeTarget
 
     void PrincessClicked()
     {
-        Debug.Log("princess");
+        Debug.Log("princess hit");
         
         var gameStateScript = Variables.Object(this).Get<GameStateScript>("GameState");
         gameStateScript.PrincessKilled();
@@ -44,4 +44,15 @@ public class PrincessScript : WrapperNodeTarget
     {
         PrincessClicked();
     }
+    
+    void OnBecameInvisible()
+    {
+        Debug.Log("princess invis");
+        
+        var gameStateScript = Variables.Object(this).Get<GameStateScript>("GameState");
+        gameStateScript.PrincessHidden();
+        
+        Destroy(this.gameObject);
+    }
+
 }
