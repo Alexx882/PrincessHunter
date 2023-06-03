@@ -6,6 +6,8 @@ using UnityEngine;
 public class PrincessScript : WrapperNodeTarget
 {
     // Start is called before the first frame update
+    private bool dead = false;
+    
     void Start()
     {
         Vector3 transformLocal;
@@ -33,6 +35,7 @@ public class PrincessScript : WrapperNodeTarget
     void PrincessClicked()
     {
         Debug.Log("princess hit");
+        dead = true;
         
         var gameStateScript = Variables.Object(this).Get<GameStateScript>("GameState");
         gameStateScript.PrincessKilled();
@@ -47,6 +50,8 @@ public class PrincessScript : WrapperNodeTarget
     
     void OnBecameInvisible()
     {
+        if (dead) return;
+        
         Debug.Log("princess invis");
         
         var gameStateScript = Variables.Object(this).Get<GameStateScript>("GameState");
