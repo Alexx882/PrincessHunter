@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9b1ab53d62d47b29b80c6fc92e9da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Prefix: +
 --- !u!23 &3252539495685645435
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PointsInfoScript : MonoBehaviour
 {
+    public string Prefix; 
+    
     private TextMeshPro pointsText;
 
-    // Start is called before the first frame update
     void Start()
     {
         // var transformLocal = transform.localScale;
         // transform.localScale = new Vector3(transformLocal.x, transformLocal.y, transformLocal.z-10);
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
@@ -28,7 +28,7 @@ public class PointsInfoScript : MonoBehaviour
         if (!gameOver)
         {
             pointsText = GetComponent<TextMeshPro>();
-            pointsText.text = "+" + points;
+            pointsText.text = Prefix + points;
         }
 
         float clipDuration = GetComponent<PlayDeathSoundScript>().PlaySound();

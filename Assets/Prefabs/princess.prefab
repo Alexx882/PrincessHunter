@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4043487305826602580}
   - component: {fileID: 3690002634918538477}
   - component: {fileID: 3518088856635341721}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4541081242746298177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.76, y: -3.61, z: -6}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1.9813, y: 1.9112, z: -5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 14859645
-  m_SortingLayer: 2
+  m_SortingLayerID: 1810235841
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -93085140, guid: f3d98ded6a56d104099d6bfa78c70d59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,5 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b732f7f1d2faef46b0e19dcb47cd419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  GameStateScript: {fileID: 0}
   points: 10
   pointsInfoPrefab: {fileID: 7822473638148229788, guid: 4c8d5b4f9177e4ec6a4c936ec0a84c9a, type: 3}

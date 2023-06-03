@@ -15,8 +15,6 @@ public class PlayDeathSoundScript : MonoBehaviour
 
     public float PlaySound()
     {
-        Debug.Log("sound");
-        
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = clips[Random.Range(0, clips.Length)];
         audioSource.Play();

@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - Princesses
-  - 
+  - Dragon
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Princess
     uniqueID: 1810235841
+    locked: 0
+  - name: Dragon
+    uniqueID: 1392115029
     locked: 0
   - name: Obstacles
     uniqueID: 14859645

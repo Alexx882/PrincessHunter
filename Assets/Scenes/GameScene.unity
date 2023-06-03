@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000c101e66b7dbde200
+  m_ApplyToSortingLayers: 00000000c101e66b7dbde20055fdf952
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1295,8 +1295,10 @@ MonoBehaviour:
   - {x: 3, y: -4, z: 1}
   - {x: -3, y: -3, z: 1}
   - {x: 0, y: -2, z: 1}
-  PrincessPrefab: {fileID: 5734220930006035454, guid: 01fe83352452f154285377b32364f81a, type: 3}
+  PrincessPrefab: {fileID: 4541081242746298177, guid: 01fe83352452f154285377b32364f81a, type: 3}
   MaxPrincesses: 3
+  DragonPrefab: {fileID: 7102932888198086049, guid: 117104d27cd034b6b8d05e00be1d94bb, type: 3}
+  MaxDragons: 3
 --- !u!114 &1422965617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f678a51813184d61a60f0e699be2ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: 9fb1f0c6a6c5d4de2b6d4f6d3f9aa1d1, type: 3}
+  music: {fileID: 8300000, guid: cdfe61a9a6bce4e2abc48eea5ce80437, type: 3}
 --- !u!82 &1422965618
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1325,7 +1327,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
