@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.SocialPlatforms.Impl;
+using Color = UnityEngine.Color;
 
 public class GameStateScript : MonoBehaviour
 {
@@ -43,7 +46,7 @@ public class GameStateScript : MonoBehaviour
     public float countdownTime = 30f;
     private float remainingTime;
 
-    public Vector3[] Points;
+    public Vector3[] SpawnPoints;
 
     public GameObject PrincessPrefab;
     public int MaxPrincesses = 3;
@@ -88,9 +91,18 @@ public class GameStateScript : MonoBehaviour
         }
     }
 
+    void OnDrawGizmos()
+    { 
+        foreach (var point in SpawnPoints)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(point, .2f);
+        }
+    }
+
     private void SpawnPrincess()
     {
-        var spawnPos = Points[new System.Random().Next(0, Points.Length)];
+        var spawnPos = SpawnPoints[new System.Random().Next(0, SpawnPoints.Length)];
 
         var princess = Instantiate(PrincessPrefab, spawnPos, Quaternion.identity);
         var princessScript = princess.GetComponent<PrincessScript>();
@@ -103,7 +115,7 @@ public class GameStateScript : MonoBehaviour
 
     private void SpawnDragon()
     {
-        var spawnPos = Points[new System.Random().Next(0, Points.Length)];
+        var spawnPos = SpawnPoints[new System.Random().Next(0, SpawnPoints.Length)];
 
         var dragon = Instantiate(DragonPrefab, spawnPos, Quaternion.identity);
         var dragonScript = dragon.GetComponent<DragonScript>();
