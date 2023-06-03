@@ -29,11 +29,10 @@ public class GameStateScript : MonoBehaviour
     public GameObject GameOverUI;
 
     private bool _gameOver = false;
-
-    private bool GameOver
-    {
+    public bool GameOver
+    { 
         get => _gameOver;
-        set
+        private set
         {
             _gameOver = value;
             GameOverUI.SetActive(value);
@@ -91,11 +90,11 @@ public class GameStateScript : MonoBehaviour
     /// <summary>
     /// Princess was killed by clicking on it.
     /// </summary>
-    public void PrincessKilled()
+    public void PrincessKilled(int points)
     {
         curPrincesses--;
         if (!GameOver)
-            Score++;
+            Score += points;
     }
 
     /// <summary>
@@ -132,4 +131,5 @@ public class GameStateScript : MonoBehaviour
     {
         CountdownText.text = "Time: " + Mathf.CeilToInt(remainingSec);
     }
+    
 }

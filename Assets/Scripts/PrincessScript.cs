@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,10 @@ public class PrincessScript : WrapperNodeTarget
     // Start is called before the first frame update
     private bool dead = false;
     
+    public int points = 10;
+
+    public GameObject pointsInfoPrefab;
+
     void Start()
     {
         Vector3 transformLocal;
@@ -29,7 +34,7 @@ public class PrincessScript : WrapperNodeTarget
     // Update is called once per frame
     void Update()
     {
-        // this.GetComponent<Rigidbody2D>().velocity = Vector2.left;
+        
     }
 
     void PrincessClicked()
@@ -38,11 +43,18 @@ public class PrincessScript : WrapperNodeTarget
         dead = true;
         
         var gameStateScript = Variables.Object(this).Get<GameStateScript>("GameState");
-        gameStateScript.PrincessKilled();
+        gameStateScript.PrincessKilled(points);
         
+        var pointsInfo = Instantiate(pointsInfoPrefab, transform.position, Quaternion.identity);
+        // TODO decouple the game objects
+        pointsInfo.GetComponent<PointsInfoScript>().Init(points, gameStateScript.GameOver);
+
         Destroy(this.gameObject);
     }
-
+    
+    /// <summary>
+    /// Triggered from Script Graph, onClick.
+    /// </summary>
     public override void run()
     {
         PrincessClicked();
